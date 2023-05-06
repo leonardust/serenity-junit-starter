@@ -1,0 +1,235 @@
+<html lang='en'><head><link href='prism/prism.css' rel='stylesheet' /></head><body><script src='prism/prism.js'></script><body><div><pre><code class='language-html'>&lt;html class=" js  no-ie8 no-ie9"&gt;<br/>
+ &lt;head&gt; <br/>
+  &lt;title&gt;Demobank - Bankowość Internetowa - Logowanie&lt;/title&gt; <br/>
+  &lt;meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"&gt; <br/>
+  &lt;meta charset="utf-8"&gt; <br/>
+  &lt;script src="js/vendor/heads.js"&gt;&lt;/script&gt; <br/>
+  &lt;link rel="shortcut icon" href="images\logo-fav.png" type="image/vnd.microsoft.icon"&gt; <br/>
+  &lt;link rel="stylesheet" href="css/style.css"&gt; <br/>
+  &lt;meta name="keywords" content=""&gt; <br/>
+  &lt;meta name="description" content=""&gt; <br/>
+  &lt;meta name="Robots" content="index,follow"&gt; <br/>
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"&gt; <br/>
+ &lt;/head&gt;<br/>
+ &lt;body onload="clearData()" style=""&gt; <br/>
+  &lt;header class="header"&gt; <br/>
+   &lt;div class="grid-wrapper"&gt; <br/>
+    &lt;h1&gt;&lt;a href="index.html" class="logo login"&gt;Demobank w sam raz do testów&lt;/a&gt;&lt;/h1&gt; <br/>
+   &lt;/div&gt; <br/>
+  &lt;/header&gt; <br/>
+  &lt;div class="bg-image bg-image-login"&gt;&lt;/div&gt; <br/>
+  &lt;section class="container"&gt; <br/>
+   &lt;div class="grid-wrapper"&gt; <br/>
+    &lt;div class="grid main-container main-container-login"&gt; <br/>
+     &lt;div class="main-content main-content-ms"&gt; <br/>
+      &lt;div class="grid login-container"&gt; <br/>
+       &lt;form autocomplete="off" class="grid-28 grid-mt-40 grid-ms-48 login-form" id="login_form"&gt; <br/>
+        &lt;h1 class="wborder" style="color:green;font-weight:bold;" id="header_2"&gt;Wersja demonstracyjna serwisu Demobank&lt;/h1&gt; <br/>
+        &lt;div class="fieldset"&gt; <br/>
+         &lt;div class="form-row" id="login_id_container"&gt; &lt;label class="grid-12 grid-ms-43 form-label"&gt;identyfikator&lt;/label&gt; <br/>
+          &lt;div class="grid-20 grid-ms-48 grid-space-1 field"&gt; <br/>
+           &lt;input type="text" css="login-input" name="login" id="login_id" data-testid="login-input" class="login-input" maxlength="8" autocomplete="off" tabindex="1"&gt;<br/>
+           &lt;br&gt; <br/>
+          &lt;/div&gt; <br/>
+          &lt;div class="login-kb ms-hide" data-id="login_id"&gt; &lt;i class="i-keyboard" id="kb_login_id"&gt;&lt;/i&gt; <br/>
+          &lt;/div&gt; <br/>
+          &lt;div class="login-tooltip-wrapper"&gt; <br/>
+           &lt;div class="login-tooltip"&gt; &lt;i class="i-hint-white tooltip widget-info"&gt; &lt;span class="info hide"&gt; Wprowadź identyfikator otrzymany z banku lub alias - dodatkowy własny identyfikator, samodzielnie zdefiniowany w Demobank online. &lt;/span&gt; &lt;/i&gt; <br/>
+           &lt;/div&gt; <br/>
+          &lt;/div&gt; <br/>
+         &lt;/div&gt; <br/>
+         &lt;div class="form-row" id="login_password_container"&gt; &lt;label class="grid-12 grid-ms-43 form-label"&gt;hasło&lt;/label&gt; <br/>
+          &lt;div class="grid-20 grid-ms-48 grid-space-1 field"&gt; <br/>
+           &lt;input type="password" name="haslo" data-testid="password-input" id="login_password" maxlength="8" class="login-input" autocomplete="off"&gt; <br/>
+          &lt;/div&gt; <br/>
+          &lt;div class="login-kb ms-hide" data-id="login_password"&gt; &lt;i class="i-keyboard"&gt;&lt;/i&gt; <br/>
+          &lt;/div&gt; <br/>
+          &lt;div class="login-tooltip-wrapper"&gt; <br/>
+           &lt;div class="login-tooltip" data-id="login_password"&gt; &lt;i class="i-hint-white tooltip widget-info"&gt; &lt;span class="info hide"&gt; Wprowadź swoje hasło. Sprawdź, czy przycisk Caps Lock jest włączony. Uwaga: 3-krotne wprowadzenie błędnego hasła spowoduje zablokowanie dostępu do systemu. &lt;/span&gt; &lt;/i&gt; <br/>
+           &lt;/div&gt; <br/>
+          &lt;/div&gt; <br/>
+         &lt;/div&gt; <br/>
+         &lt;div class="form-row hide" id="login_token_container"&gt; &lt;label class="grid-12 grid-ms-43 form-label"&gt;token&lt;/label&gt; <br/>
+          &lt;div class="grid-20 grid-ms-48 grid-space-1 field ignore-error"&gt; <br/>
+           &lt;input type="text" name="" id="login_token" maxlength="9" class="login-input ignore" autocomplete="off"&gt; <br/>
+          &lt;/div&gt; <br/>
+          &lt;div class="login-kb ms-hide" data-id="login_token"&gt; &lt;i class="i-keyboard"&gt;&lt;/i&gt; <br/>
+          &lt;/div&gt; <br/>
+          &lt;div class="login-tooltip-wrapper"&gt; <br/>
+           &lt;div class="login-tooltip"&gt; &lt;i class="i-hint-white tooltip widget-info"&gt; &lt;span class="info hide"&gt; Wpisz aktualne wskazanie tokena. &lt;/span&gt; &lt;/i&gt; <br/>
+           &lt;/div&gt; <br/>
+          &lt;/div&gt; <br/>
+         &lt;/div&gt; <br/>
+         &lt;div class="form-row form-actions"&gt; &lt;button type="submit" id="login-btn" data-testid="login-button" class="btn red arrow grid-space-13 grid-ms-space-0" disabled&gt;zaloguj się&lt;/button&gt; <br/>
+         &lt;/div&gt; <br/>
+        &lt;/div&gt; <br/>
+       &lt;/form&gt; <br/>
+       &lt;section class="grid-28 grid-space-0 grid-mt-40 grid-mt-space-0 grid-ms-48 box-white box-white-transparent login-info"&gt; <br/>
+        &lt;h1 class="login-highlight"&gt; Uwaga! &lt;/h1&gt; <br/>
+        &lt;p&gt; Tutaj prezentujemy wersję demonstracyjną serwisu Demobank online. &lt;br&gt; Aby się zalogować podaj dowolne 8 znaków identyfikatora oraz dowolne 8 znaków hasła. Nie podawaj rzeczywistych danych! &lt;/p&gt; <br/>
+       &lt;/section&gt; <br/>
+       &lt;section class="grid login-help"&gt; <br/>
+        &lt;div class="grid-35 grid-space-3 grid-mt-48 padding-mt-10-0  ms-hide login-help-section"&gt; <br/>
+         &lt;h2 class="wborder"&gt;Bezpieczeństwo&lt;/h2&gt; <br/>
+         &lt;div class="grid-22 grid-space-0"&gt; <br/>
+          &lt;h3 class="login-help-head"&gt;Podstawowe zasady&lt;/h3&gt; <br/>
+          &lt;ul class="list-red"&gt; <br/>
+           &lt;li&gt; loguj się wyłacznie przez zaufaną stronę &lt;/li&gt; <br/>
+           &lt;li&gt; regularnie aktualizuj system operacyjny i oprogramowanie antywirusowe &lt;/li&gt; <br/>
+           &lt;li&gt; sprawdzaj czy połączenie jest szyfrowane (kłódka na pasku adresu przeglądarki) &lt;/li&gt; <br/>
+          &lt;/ul&gt; <br/>
+         &lt;/div&gt; <br/>
+         &lt;div class="grid-22 grid-space-4"&gt; <br/>
+          &lt;h3 class="login-help-head"&gt;Pamiętaj&lt;/h3&gt; <br/>
+          &lt;ul class="list-red"&gt; <br/>
+           &lt;li&gt; podczas logowania bank nigdy nie prosi o podanie wskazania tokena więcej niż raz &lt;/li&gt; <br/>
+           &lt;li&gt; bank nigdy nie wysyła e-maili z prośbą o zalogowanie na wskazany link i podanie swoich danych w celach weryfikacji &lt;/li&gt; <br/>
+          &lt;/ul&gt; <br/>
+         &lt;/div&gt; <br/>
+        &lt;/div&gt; <br/>
+       &lt;/section&gt; <br/>
+      &lt;/div&gt; <br/>
+     &lt;/div&gt; <br/>
+    &lt;/div&gt; <br/>
+   &lt;/div&gt; <br/>
+  &lt;/section&gt; <br/>
+  &lt;footer class="footer" id="footer_placeholder"&gt;<br/>
+   &lt;div&gt; <br/>
+   &lt;/div&gt;<br/>
+  &lt;/footer&gt; &lt;!-- scripts here --&gt; <br/>
+  &lt;script src="js/vendor/libs.js"&gt;&lt;/script&gt; <br/>
+  &lt;script src="js/vendor/libs_login.js"&gt;&lt;/script&gt; <br/>
+  &lt;script src="js/app/app_modules.js"&gt;&lt;/script&gt; <br/>
+  &lt;script src="js/app/app.js"&gt;&lt;/script&gt; <br/>
+  &lt;script src="js/wspolne.js"&gt;&lt;/script&gt; &lt;!-- end scripts --&gt; <br/>
+  &lt;script&gt;<br/>
+        // Get references to the login and password input fields<br/>
+        const loginInput = document.getElementById("login_id");<br/>
+        const passwordInput = document.getElementById("login_password");<br/>
+<br/>
+        // Get a reference to the login button<br/>
+        const loginButton = document.getElementById("login-btn");<br/>
+<br/>
+        // Add event listeners to the input fields to check if they have at least 8 characters<br/>
+        loginInput.addEventListener("input", checkInputs);<br/>
+        passwordInput.addEventListener("input", checkInputs);<br/>
+        loginButton.addEventListener("click", login);<br/>
+<br/>
+        function checkInputs() {<br/>
+          // Check if both input fields have at least 8 characters<br/>
+          if (loginInput.value.length &gt;= 8 && passwordInput.value.length &gt;= 8) {<br/>
+            // If so, enable the login button<br/>
+            loginButton.disabled = false;<br/>
+          } else {<br/>
+            // If not, disable the login button<br/>
+            loginButton.disabled = true;<br/>
+          }<br/>
+        }<br/>
+<br/>
+        function login() {<br/>
+            setCookie("isLogged", 'true', 1);<br/>
+            window.location.href = 'pulpit.html';<br/>
+        }<br/>
+<br/>
+        function setCookie(cname, cvalue, exdays) {<br/>
+            const d = new Date();<br/>
+            d.setTime(d.getTime() + (exdays*24*60*60*1000));<br/>
+            let expires = "expires="+ d.toUTCString();<br/>
+            document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";<br/>
+        }<br/>
+<br/>
+        $('#ident_pass').on('click', function (e) {<br/>
+            e.preventDefault();<br/>
+            window.manager.require('app:modules:modal:window:show');<br/>
+        });<br/>
+<br/>
+        $('#ident_rem').on('click', function (e) {<br/>
+            e.preventDefault();<br/>
+            window.manager.require('app:modules:modal:window:show');<br/>
+        });<br/>
+<br/>
+        $(document).ready(function () {<br/>
+            var param, query = window.location.search.substring(1);<br/>
+            var pos = query.indexOf('=');<br/>
+            if (pos &gt; 0) {<br/>
+                param = query.substring(pos + 1);<br/>
+                $('#login_id').val(param);<br/>
+            }<br/>
+        });<br/>
+<br/>
+        $(function () {<br/>
+            if (jQuery.support.leadingWhitespace) {<br/>
+                $('input[type="password"]').parents('form').submit(function () {<br/>
+                    if ($('input[type="password"]').parents('form').data('status') === "step_1" || $(<br/>
+                            'input[type="password"]').parents('form').data('status') === "step_1_token") {<br/>
+                        // $(this).find('input[type="password"]').hide().prop('type', 'private');<br/>
+                    }<br/>
+                });<br/>
+            }<br/>
+        });<br/>
+<br/>
+        window.oValidator.setFields([{<br/>
+                id: 'login_id',<br/>
+                validators: [{<br/>
+                        'type': 'required'<br/>
+                    },<br/>
+                    {<br/>
+                        'type': 'minlength',<br/>
+                        'value': '8'<br/>
+                    }<br/>
+                ],<br/>
+                messages: [<br/>
+                    'pole wymagane',<br/>
+                    'identyfikator ma min. 8 znaków'<br/>
+                ],<br/>
+                is_dirty: false,<br/>
+                is_error: false,<br/>
+                error_message: ''<br/>
+            },<br/>
+            {<br/>
+                id: 'login_password',<br/>
+                validators: [{<br/>
+                        'type': 'required'<br/>
+                    },<br/>
+                    {<br/>
+                        'type': 'minlength',<br/>
+                        'value': 8<br/>
+                    },<br/>
+                ],<br/>
+                messages: [<br/>
+                    'pole wymagane',<br/>
+                    'hasło ma min. 8 znaków'<br/>
+                ],<br/>
+                is_dirty: false,<br/>
+                is_error: false,<br/>
+                error_message: ''<br/>
+            },<br/>
+            {<br/>
+                id: 'login_token',<br/>
+                validators: [{<br/>
+                        'type': 'required'<br/>
+                    },<br/>
+                    {<br/>
+                        'type': 'token'<br/>
+                    }<br/>
+                ],<br/>
+                messages: [<br/>
+                    'pole wymagane',<br/>
+                    'wpisz poprawny token'<br/>
+                ],<br/>
+                is_dirty: false,<br/>
+                is_error: false,<br/>
+                error_message: ''<br/>
+            }<br/>
+        ]);<br/>
+<br/>
+        function clearData() {<br/>
+            clearCookies()<br/>
+        }<br/>
+<br/>
+        function clearCookies() {<br/>
+            document.cookie = "isLogged=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";<br/>
+        }<br/>
+    &lt;/script&gt; <br/>
+ &lt;/body&gt;<br/>
+&lt;/html&gt;</code></pre></div></body></html>
