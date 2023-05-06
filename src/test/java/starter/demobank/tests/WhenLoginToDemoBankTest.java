@@ -28,7 +28,7 @@ class WhenLoginToDemoBankTest {
         login.loginWithCredentials(TestUtils.generateRandomString(8), TestUtils.generateRandomString(8));
 
         Serenity.reportThat("The logged username should appear in account info section when login with valid credentials",
-                () -> assertThat(homePage.getLoggedUsername()).isEqualTo("Jan Demobakowy")
+                () -> assertThat(homePage.getLoggedUsername()).isEqualTo("Jan Demobankowy")
         );
     }
 }
